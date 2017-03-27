@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Riot todo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/todo.css">
+    </head>
+    <body>
+        <!-- todoタグ出力 -->
+        <todo></todo>
+
+        <!-- todoタグ読み込み -->
+        <script src="js/todo.tag" type="riot/tag"></script>
+        <!-- riot.js読み込み -->
+        <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
+
+        <script>
+        // todoタグマウント
+        riot.mount('todo', {
+            title: 'TODOリスト',
+            // 初期リスト
+            items: [
+                { title: 'タスク1' },
+                { title: 'タスク2' },
+                { title: 'タスク3' }
+            ],
+            // ステータス
+            status: [
+                { name: '未対応', value: '1' },
+                { name: '対応中', value: '2' },
+                { name: '対応済', value: '3' },
+            ]
+        })
+        </script>
+    </body>
+</html>

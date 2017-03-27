@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Riot.js Test</title>
+        <!-- riot.js読み込み -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.2/riot+compiler.min.js'></script>
+    </head>
+    <body>
+        <!-- hellowタグ -->
+        <hellow></hellow>
+
+        <script type="riot/tag">
+            // hellowタグの中身
+            <hellow>
+                <h1>{ title }</h1>
+                // titleを取得
+                this.title = opts.title;
+            </hellow>
+        </script>
+        
+        <script>
+            // マウント
+            riot.mount('hellow', {
+                // タイトルをセット
+                title: 'Hellow World!'
+            });
+        </script>
+    </body>
+</html>
